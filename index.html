@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="onnxruntime-web-1.16.3/package/dist/ort.min.js"></script> -->
+    <script src="opencv.js"></script>
+    <script src="tensorflow/tfjs/dist/tf.min.js"></script>
+
+</head>
+<body>
+    
+    <img id="image1" src="img/cat.jpg" width="400px" height="400px">
+    <img id="image2" src="img/i.jpg" width="400px" height="400px">
+    <img id="image3" src="img/bb.jpg" width="400px" height="400px">
+    <img id="image4" src="img/cat.jpg" width="400px" height="400px">
+    <img id="image5" src="img/i.jpg" width="400px" height="400px">
+    <img id="image6" src="img/j.jpg" width="400px" height="400px">
+
+    <img id="image7" src="img/bb.jpg" width="400px" height="400px">
+    <img id="image8" src="img/cat.jpg" width="400px" height="400px">
+    <img id="image9" src="img/bb.jpg" width="400px" height="400px">
+    <img id="image10" src="img/cat.jpg" width="400px" height="400px">
+    <img id="image11" src="img/i.jpg" width="400px" height="400px">
+    <img id="image12" src="img/j.jpg" width="400px" height="400px">
+
+
+    <img id="image13" src="img/bb.jpg" width="400px" height="400px">
+    <img id="image14" src="img/cat.jpg" width="400px" height="400px">
+    <img id="image15" src="img/bb.jpg" width="400px" height="400px">
+    <img id="image16" src="img/cat.jpg" width="400px" height="400px">
+    
+    <img id="image17" src="img/i.jpg" width="400px" height="400px">
+    <img id="image18" src="img/j.jpg" width="400px" height="400px">
+    <img id="image19" src="img/i.jpg" width="400px" height="400px">
+    <img id="image20" src="img/j.jpg" width="400px" height="400px">
+
+    <!-- <img id="image21" src="img/bb.jpg" width="400px" height="400px">
+    <img id="image22" src="img/cat.jpg" width="400px" height="400px">
+    <img id="image23" src="img/i.jpg" width="400px" height="400px">
+    <img id="image24" src="img/j.jpg" width="400px" height="400px">
+    <img id="image25" src="img/i.jpg" width="400px" height="400px">
+
+    <img id="image26" src="img/bb.jpg" width="400px" height="400px">
+    <img id="image27" src="img/cat.jpg" width="400px" height="400px">
+    <img id="image28" src="img/i.jpg" width="400px" height="400px">
+    <img id="image29" src="img/j.jpg" width="400px" height="400px">
+    <img id="image30" src="img/i.jpg" width="400px" height="400px">
+
+    <img id="image31" src="img/bb.jpg" width="400px" height="400px">
+    <img id="image32" src="img/cat.jpg" width="400px" height="400px">
+    <img id="image33" src="img/i.jpg" width="400px" height="400px">
+    <img id="image34" src="img/j.jpg" width="400px" height="400px">
+    <img id="image35" src="img/i.jpg" width="400px" height="400px">
+
+    <img id="image36" src="img/bb.jpg" width="400px" height="400px">
+    <img id="image37" src="img/cat.jpg" width="400px" height="400px">
+    <img id="image38" src="img/i.jpg" width="400px" height="400px">
+    <img id="image39" src="img/j.jpg" width="400px" height="400px">
+    <img id="image40" src="img/i.jpg" width="400px" height="400px"> -->
+    
+
+    <!-- <img id="image41" src="img/bb.jpg" width="400px" height="400px">
+    <img id="image42" src="img/cat.jpg" width="400px" height="400px">
+    <img id="image43" src="img/i.jpg" width="400px" height="400px">
+    <img id="image44" src="img/j.jpg" width="400px" height="400px">
+    <img id="image45" src="img/i.jpg" width="400px" height="400px">
+
+    <img id="image46" src="img/bb.jpg" width="400px" height="400px">
+    <img id="image47" src="img/cat.jpg" width="400px" height="400px">
+    <img id="image48" src="img/i.jpg" width="400px" height="400px">
+    <img id="image49" src="img/j.jpg" width="400px" height="400px">
+    <img id="image50" src="img/i.jpg" width="400px" height="400px">
+
+    <img id="image51" src="img/bb.jpg" width="400px" height="400px">
+    <img id="image52" src="img/cat.jpg" width="400px" height="400px">
+    <img id="image53" src="img/i.jpg" width="400px" height="400px">
+    <img id="image54" src="img/j.jpg" width="400px" height="400px">
+    <img id="image55" src="img/i.jpg" width="400px" height="400px">
+
+    <img id="image56" src="img/bb.jpg" width="400px" height="400px">
+    <img id="image57" src="img/cat.jpg" width="400px" height="400px">
+    <img id="image58" src="img/i.jpg" width="400px" height="400px">
+    <img id="image59" src="img/j.jpg" width="400px" height="400px">
+    <img id="image60" src="img/i.jpg" width="400px" height="400px">
+
+    <img id="image61" src="img/bb.jpg" width="400px" height="400px">
+    <img id="image62" src="img/cat.jpg" width="400px" height="400px">
+    <img id="image63" src="img/i.jpg" width="400px" height="400px">
+    <img id="image64" src="img/j.jpg" width="400px" height="400px">
+    <img id="image65" src="img/i.jpg" width="400px" height="400px">
+
+    <img id="image66" src="img/bb.jpg" width="400px" height="400px">
+    <img id="image67" src="img/cat.jpg" width="400px" height="400px">
+    <img id="image68" src="img/i.jpg" width="400px" height="400px">
+    <img id="image69" src="img/j.jpg" width="400px" height="400px">
+    <img id="image70" src="img/i.jpg" width="400px" height="400px">
+
+    <img id="image71" src="img/bb.jpg" width="400px" height="400px">
+    <img id="image72" src="img/cat.jpg" width="400px" height="400px">
+    <img id="image73" src="img/i.jpg" width="400px" height="400px">
+    <img id="image74" src="img/j.jpg" width="400px" height="400px">
+    <img id="image75" src="img/i.jpg" width="400px" height="400px">
+
+    <img id="image76" src="img/bb.jpg" width="400px" height="400px">
+    <img id="image77" src="img/cat.jpg" width="400px" height="400px">
+    <img id="image78" src="img/i.jpg" width="400px" height="400px">
+    <img id="image79" src="img/j.jpg" width="400px" height="400px">
+    <img id="image80" src="img/i.jpg" width="400px" height="400px">  -->
+    
+    <script src="mainFunction.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
